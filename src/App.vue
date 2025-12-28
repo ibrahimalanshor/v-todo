@@ -93,16 +93,18 @@ function onToggleDarkMode() {
         class="p-4 text-center min-h-80 flex flex-col justify-center items-center gap-4"
       >
         <div
-          class="w-18 h-18 bg-neutral-50 rounded-full flex items-center justify-center"
+          class="w-18 h-18 bg-neutral-50 rounded-full flex items-center justify-center dark:bg-neutral-800"
         >
           <Icon
             icon="ri:checkbox-circle-line"
-            class="size-10 text-neutral-300"
+            class="size-10 text-neutral-300 dark:text-neutral-600"
           />
         </div>
         <div class="max-w-[200px]">
-          <h2 class="text-lg font-semibold text-neutral-900">All Done</h2>
-          <p class="text-neutral-400 leading-relaxed">
+          <h2 class="text-lg font-semibold text-neutral-900 dark:text-white">
+            All Done
+          </h2>
+          <p class="text-neutral-400 leading-relaxed dark:text-neutral-500">
             No tasks for today, add some tasks below.
           </p>
         </div>
