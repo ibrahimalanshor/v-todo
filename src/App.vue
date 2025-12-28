@@ -61,14 +61,14 @@ function onToggleDarkMode() {
       >
         <div class="space-y-1">
           <p
-            class="text-xs text-neutral-400 font-semibold tracking-wider uppercase"
+            class="text-xs text-neutral-400 font-semibold tracking-wider uppercase dark:text-neutral-500"
           >
             Activities
           </p>
           <h1
             class="font-bold text-neutral-900 text-2xl tracking-tight dark:text-white"
           >
-            Today
+            Todo
           </h1>
         </div>
         <div class="flex items-center gap-2">
