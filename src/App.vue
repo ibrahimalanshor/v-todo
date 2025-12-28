@@ -73,7 +73,7 @@ function onToggleDarkMode() {
         </div>
         <div class="flex items-center gap-2">
           <a
-            href=""
+            href="https://github.com/ibrahimalanshor/v-todo"
             class="block w-10 h-10 border border-neutral-200 text-neutral-900 rounded-full flex items-center justify-center transition hover:bg-black hover:border-black hover:text-white dark:border-neutral-800 dark:text-neutral-400 dark:hover:text-neutral-400 dark:hover:border-neutral-800 dark:hover:bg-neutral-800"
           >
             <Icon icon="ri:github-fill" class="size-6" />
