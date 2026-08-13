@@ -10,6 +10,12 @@ async function setUser() {
   if (await checkLoggedIn()) {
     if (!(await setAuthuser())) {
       router.push({ name: 'login' });
+    } else {
+      history.replaceState(
+        null,
+        document.title,
+        location.pathname + location.search,
+      );
     }
   }
 }
