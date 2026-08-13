@@ -4,7 +4,7 @@ import BaseCard from '../../../components/base/BaseCard.vue';
 import BaseState from '../../../components/base/BaseState.vue';
 import BaseCheckbox from '../../../components/base/BaseCheckbox.vue';
 import BaseInput from '../../../components/base/BaseInput.vue';
-import { nextTick, reactive, ref, useTemplateRef } from 'vue';
+import { computed, nextTick, reactive, ref, useTemplateRef } from 'vue';
 import { supabase } from '../../../core/supabase';
 import BaseInlineInput from '../../../components/base/BaseInlineInput.vue';
 import BaseIconButton from '../../../components/base/BaseIconButton.vue';
@@ -26,6 +26,12 @@ const editCard = reactive({
 const editTask = reactive({
   index: null,
   name: null,
+});
+
+const progress = computed(() => {
+  const done = tasks.value.filter((task) => task.done).length;
+
+  return Math.floor((done / tasks.value.length) * 100);
 });
 
 async function loadDailyClearTasks() {
@@ -177,6 +183,10 @@ if (!card.value.wasCreated) {
         </button>
       </form>
       <div v-else class="flex items-center justify-between">
+        <div
+          class="bg-black h-px absolute -bottom-px left-0 dark:bg-white"
+          :style="{ width: `${progress}%` }"
+        ></div>
         <h2 class="font-bold text-2xl tracking-tight" @click="onOpenEditCard">
           {{ card.name }}
         </h2>

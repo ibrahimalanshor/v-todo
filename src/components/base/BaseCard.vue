@@ -15,7 +15,10 @@ const props = defineProps({
       withDivider ? 'divide-y divide-neutral-100 dark:divide-neutral-800' : '',
     ]"
   >
-    <header v-if="withHeader || title" :class="[withDivider ? 'p-6' : '']">
+    <header
+      v-if="withHeader || title"
+      :class="[withDivider ? 'p-6' : '', 'relative']"
+    >
       <slot name="header">
         <h2 v-if="title" class="font-bold text-2xl tracking-tight">
           {{ title }}
