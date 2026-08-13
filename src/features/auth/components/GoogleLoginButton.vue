@@ -5,6 +5,9 @@ import { supabase } from '../../../core/supabase';
 function onGoogleLogin() {
   supabase.auth.signInWithOAuth({
     provider: 'google',
+    options: {
+      ...(import.meta.env.DEV ? { redirectTo: window.location.origin } : {}),
+    },
   });
 }
 </script>
