@@ -60,6 +60,9 @@ async function onLogout() {
             <div
               class="h-px bg-neutral-200 dark:bg-neutral-700 my-1 mx-2"
             ></div>
+            <BaseDropdownItem tag="router-link" :to="{ name: 'changelog' }"
+              >Whats New</BaseDropdownItem
+            >
             <BaseDropdownItem @click="onLogout"> Logout </BaseDropdownItem>
           </div>
         </template>

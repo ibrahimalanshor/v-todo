@@ -27,6 +27,15 @@ export const routes = [
     },
   },
   {
+    path: '/changelog',
+    name: 'changelog',
+    component: () => import('./common/pages/Changelog.vue'),
+    meta: {
+      title: 'Changelog',
+      layout: 'LayoutPage',
+    },
+  },
+  {
     path: '/login',
     name: 'login',
     component: () => import('./features/auth/pages/LoginPage.vue'),
